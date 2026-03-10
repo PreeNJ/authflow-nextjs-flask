@@ -9,3 +9,8 @@ export const getToken = (): string | null => {
   }
   return null;
 };
+export const removeToken = (): void => {
+  if (typeof window !== "undefined") {
+    localStorage.removeItem("token");
+  }
+};
